@@ -256,19 +256,19 @@ function App() {
           <div className="contact-items">
             <div>
               <span className="contact-label">Email</span>
-              <a href="mailto:youremail@example.com" className="contact-value">
-                youremail@example.com
+              <a href="mailto:catchsatprem@gmail.com" className="contact-value">
+                catchsatprem@gmail.com
               </a>
             </div>
             <div>
               <span className="contact-label">LinkedIn</span>
               <a
-                href="https://www.linkedin.com/in/your-profile"
+                href="https://www.linkedin.com/in/satprem-rath-6735501a/"
                 target="_blank"
                 rel="noreferrer"
                 className="contact-value"
               >
-                linkedin.com/in/your-profile
+                linkedin.com/in/satprem-rath
               </a>
             </div>
             <div>
