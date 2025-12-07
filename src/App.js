@@ -37,7 +37,7 @@ function App() {
             {/* Photo + Name + Title block */}
             <div className="hero-identity">
               <div className="profile-frame">
-                <img src="/Satprem_pp.jpeg" alt="Satprem Rath" />
+                <img src="./Satprem_pp.jpeg" alt="Satprem Rath" />
               </div>
             </div>
 
