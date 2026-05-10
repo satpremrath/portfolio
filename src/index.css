@@ -236,13 +236,15 @@ body {
 }
 
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.9);
-  color: var(--text-main);
-  border-color: var(--border-subtle);
+  background: linear-gradient(90deg, #0f172a, #1e3a5f);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 12px 25px rgba(15, 23, 42, 0.3);
 }
 
 .btn-secondary:hover {
-  background: #f9fafb;
+  transform: translateY(-1px);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.4);
 }
 
 /* Hero Card */
@@ -275,6 +277,46 @@ body {
   margin-top: 0.45rem;
 }
 
+.hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  text-align: center;
+  padding: 0.4rem 0.5rem;
+}
+
+.hero-stat-number {
+  font-size: 1.6rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #3b82f6, #6366f1);
+  -webkit-background-clip: text;
+  color: transparent;
+  line-height: 1.1;
+}
+
+.hero-stat-label {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 0.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+}
+
+.hero-stat-divider {
+  width: 1px;
+  height: 2.5rem;
+  background: var(--border-subtle);
+  flex-shrink: 0;
+}
+
 /* Cards */
 .card {
   background: var(--bg-alt);
@@ -282,6 +324,48 @@ body {
   border: 1px solid var(--border-subtle);
   padding: 1.6rem 1.5rem;
   box-shadow: var(--card-shadow);
+}
+
+/* Blogs Grid */
+.blogs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.2rem;
+}
+
+.blog-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  background: var(--bg-alt);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.4rem 1.5rem;
+  box-shadow: var(--card-shadow);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.blog-card:hover {
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.1);
+  border-color: #bfdbfe;
+}
+
+.blog-index {
+  font-size: 1.4rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #3b82f6, #6366f1);
+  -webkit-background-clip: text;
+  color: transparent;
+  flex-shrink: 0;
+  line-height: 1;
+  padding-top: 0.1rem;
+}
+
+.blog-title {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  line-height: 1.55;
+  margin: 0;
 }
 
 /* About Grid */
@@ -300,6 +384,10 @@ body {
   font-size: 0.95rem;
   color: var(--text-muted);
   line-height: 1.5;
+}
+
+.card p + p {
+  margin-top: 1rem;
 }
 
 .list {
@@ -387,10 +475,113 @@ body {
   gap: 1.4rem;
 }
 
+.project-tabs {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.4rem;
+  flex-wrap: wrap;
+}
+
+.project-tab-btn {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.75rem 1.1rem;
+  border: 1.5px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  background: var(--bg-alt);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  line-height: 1.4;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.project-tab-btn:hover {
+  border-color: #93c5fd;
+  color: var(--text-primary);
+}
+
+.project-tab-btn.active {
+  border-color: #3b82f6;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-weight: 600;
+}
+
+.project-detail {
+  padding: 2rem;
+}
+
+.project-detail-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.project-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.project-detail-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-detail-text {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 0.25rem;
+}
+
 .project-card p {
   font-size: 0.92rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
   color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.project-section-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #3b82f6;
+  margin: 1.1rem 0 0.5rem;
+}
+
+.project-stack {
+  font-size: 0.82rem !important;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: 0.3rem !important;
+}
+
+.project-list {
+  list-style: none;
+  margin: 0 0 0.25rem;
+  padding: 0;
+}
+
+.project-list li {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  padding: 0.25rem 0 0.25rem 1.1rem;
+  position: relative;
+}
+
+.project-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #3b82f6;
+  font-weight: 700;
 }
 
 /* Contact */
