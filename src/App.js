@@ -207,6 +207,20 @@ function App() {
               </ul>
             </div>
           </div>
+
+          <div className="timeline-item">
+            <div className="timeline-marker" />
+            <div className="timeline-content card">
+              <h3>Advanced Data Scientist – Honeywell Technology Solutions</h3>
+              <p className="timeline-meta">Advanced Analytics AI, NLP & Graph Intelligence</p>
+              <ul className="list">
+                <li>Designed enterprise graph databases for MDM, supply chain, and fraud detection.</li>
+                <li>Developed graph ML models for recommendations, inference, and deduplication.</li>
+                <li>Built scalable Databricks PySpark pipelines for enterprise data processing.</li>
+                <li>Developed multilingual NLP and similarity models using Hugging Face transformers.</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
